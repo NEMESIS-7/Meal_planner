@@ -19,11 +19,13 @@ public class DIETUPDATED2 {
             case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9: case 10: case 11:
                 randomizer(input, random, "breakfast");
                 break;
+
             //afternoon
-            case 12: case 13: case 14: case 15: case 16: case 17: case 18:
+            case 12: case 13: case 14: case 15: case 16: case 17:
                 randomizer(input, random, "lunch");
                 break;
             //evening
+            case 18:
             case 19: case 20: case 21: case 22: case 23:
                 randomizer(input, random, "supper");
                 break;
@@ -32,10 +34,12 @@ public class DIETUPDATED2 {
         }
     }
 
+
+
     //method to handle the menu updating and output of random foods
-    public static void randomizer (Scanner input, Random random, String mealtype){
+    public static void randomizer(Scanner input, Random random, String mealtype){
         try {  //handling the event that a user might enter letters instead of digits
-            System.out.println("It's " + mealtype + " time. How many " +  mealtype + "menu items do you have in mind?: ");
+            System.out.println("You will be having " + mealtype + ". How many " +  mealtype + " menu items do you have in mind?: ");
             int nummenu = input.nextInt();
             input.nextLine();                               //consuming the newline character
 
@@ -45,7 +49,7 @@ public class DIETUPDATED2 {
                 Menu[i] = input.nextLine();                 //storing the menu items to the available indexes
             }
             int randomfood = random.nextInt(nummenu);       //initializng a random object to generate random numbers bound to the nummber of menu items
-            System.out.println("You will be having " + Menu[randomfood] + ".");
+            System.out.println("You will be having " + Menu[randomfood] + " for supper.");
 
         } catch (Exception e) {
             System.out.println("enter digits only");
