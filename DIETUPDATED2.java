@@ -25,8 +25,7 @@ public class DIETUPDATED2 {
                 randomizer(input, random, "lunch");
                 break;
             //evening
-            case 18:
-            case 19: case 20: case 21: case 22: case 23:
+            case 18: case 19: case 20: case 21: case 22: case 23:
                 randomizer(input, random, "supper");
                 break;
             default:
