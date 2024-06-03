@@ -48,7 +48,7 @@ public class DIETUPDATED2 {
                 Menu[i] = input.nextLine();                 //storing the menu items to the available indexes
             }
             int randomfood = random.nextInt(nummenu);       //initializng a random object to generate random numbers bound to the nummber of menu items
-            System.out.println("You will be having " + Menu[randomfood] + " for supper.");
+            System.out.println("You will be having " + Menu[randomfood] + " for " + mealtype + '.');
 
         } catch (Exception e) {
             System.out.println("enter digits only");
