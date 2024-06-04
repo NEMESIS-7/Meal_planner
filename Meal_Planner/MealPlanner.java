@@ -1,8 +1,7 @@
 package Meal_Planner;
-
 import java.util.*;
 import java.time.*;
-public class DIETUPDATED2 {
+public class MealPlanner {
     public static void main(String[] args) {
         //initializing the scanner object
         Scanner input = new Scanner(System.in);
@@ -27,7 +26,7 @@ public class DIETUPDATED2 {
             //evening
             case 18: case 19: case 20: case 21: case 22: case 23:
                 randomizer(input, random, "supper");
-                break;
+//                break;
             default:
                 System.out.println("Invalid input. Try again.");
         }
@@ -36,19 +35,19 @@ public class DIETUPDATED2 {
 
 
     //method to handle the menu updating and output of random foods
-    public static void randomizer(Scanner input, Random random, String mealtype){
+    public static void randomizer(Scanner input, Random random, String mealType){
         try {  //handling the event that a user might enter letters instead of digits
-            System.out.println("You will be having " + mealtype + ". How many " +  mealtype + " menu items do you have in mind?: ");
-            int nummenu = input.nextInt();
+            System.out.println("You will be having " + mealType + ". How many " +  mealType + " menu items do you have in mind?: ");
+            int numMenu = input.nextInt();
             input.nextLine();                               //consuming the newline character
 
-            String[] Menu = new String[nummenu];            //initializing an empty string array
+            String[] Menu = new String[numMenu];            //initializing an empty string array
             for (int i = 0; i < Menu.length; i++) {         // updating the array with the menu items
                 System.out.println("Enter the menu item");
                 Menu[i] = input.nextLine();                 //storing the menu items to the available indexes
             }
-            int randomfood = random.nextInt(nummenu);       //initializng a random object to generate random numbers bound to the nummber of menu items
-            System.out.println("You will be having " + Menu[randomfood] + " for " + mealtype + '.');
+            int randomFood = random.nextInt(numMenu);       //initializing a random object to generate random numbers bound to the number of menu items
+            System.out.println("You will be having " + Menu[randomFood] + " for " + mealType + '.');
 
         } catch (Exception e) {
             System.out.println("enter digits only");
